@@ -7,6 +7,7 @@ import sys
 import urllib
 from bs4 import BeautifulSoup
 import json
+import becky
 import explzh
 import winscp
 
@@ -15,7 +16,7 @@ def line_notify(updates):
     url = "https://notify-api.line.me/api/notify"
     headers = {"Authorization": "Bearer " + token}
     for update in updates:
-        payload = {"message": '%s %s->%s' % (update['app'],
+        payload = {"message": '%s\n%s→%s' % (update['app'],
                                              update['version_prev'],
                                              update['version'])}
         requests.post(url, headers=headers, data=payload)
@@ -29,7 +30,8 @@ if __name__ == '__main__':
         versions = {}
 
     updates = []
-    apps = {'Explzh': explzh.get_explzh_version,
+    apps = {'Becky!': becky.get_becky_version,
+            'Explzh': explzh.get_explzh_version,
             'WinSCP': winscp.get_winscp_version}
     for app, get_version in apps.items():
         version = get_version()
