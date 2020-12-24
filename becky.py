@@ -5,7 +5,7 @@ import requests
 import urllib
 from bs4 import BeautifulSoup
 
-def get_explzh_version():
+def get_becky_version():
     url = 'https://www.rimarts.co.jp/becky-j.htm'
     ua = 'softverupcheck'
 
