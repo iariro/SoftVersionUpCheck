@@ -10,6 +10,7 @@ import json
 import becky
 import explzh
 import winscp
+import tortoisegit
 
 def line_notify(updates):
     token = "nPQEoC190nfvydJRbQmY75SY00Ygvt0CxsaXWoLTUUH"
@@ -32,6 +33,7 @@ if __name__ == '__main__':
     updates = []
     apps = {'Becky!': becky.get_becky_version,
             'Explzh': explzh.get_explzh_version,
+            'TortoiseGit': tortoisegit.get_tortoisegit_version,
             'WinSCP': winscp.get_winscp_version}
     for app, get_version in apps.items():
         version = get_version()
