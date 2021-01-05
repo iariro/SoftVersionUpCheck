@@ -5,7 +5,7 @@ import requests
 import urllib
 from bs4 import BeautifulSoup
 
-def get_winscp_version():
+def get_version():
     url = 'https://winscp.net/eng/download.php'
     ua = 'softverupcheck'
 
@@ -19,4 +19,4 @@ def get_winscp_version():
 
 
 if __name__ == '__main__':
-    print(get_winscp_version())
+    print(get_version())

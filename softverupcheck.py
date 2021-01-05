@@ -9,8 +9,9 @@ from bs4 import BeautifulSoup
 import json
 import becky
 import explzh
-import winscp
+import teraterm
 import tortoisegit
+import winscp
 
 def line_notify(updates):
     token = "nPQEoC190nfvydJRbQmY75SY00Ygvt0CxsaXWoLTUUH"
@@ -31,10 +32,11 @@ if __name__ == '__main__':
         versions = {}
 
     updates = []
-    apps = {'Becky!': becky.get_becky_version,
-            'Explzh': explzh.get_explzh_version,
-            'TortoiseGit': tortoisegit.get_tortoisegit_version,
-            'WinSCP': winscp.get_winscp_version}
+    apps = {'Becky!': becky.get_version,
+            'Explzh': explzh.get_version,
+            'TeraTerm': teraterm.get_version,
+            'TortoiseGit': tortoisegit.get_version,
+            'WinSCP': winscp.get_version}
     for app, get_version in apps.items():
         version = get_version()
         version_prev = None

@@ -5,7 +5,7 @@ import requests
 import urllib
 from bs4 import BeautifulSoup
 
-def get_tortoisegit_version():
+def get_version():
     url = 'https://tortoisegit.org/download/'
     ua = 'softverupcheck'
 
@@ -21,5 +21,5 @@ def get_tortoisegit_version():
 
 
 if __name__ == '__main__':
-    version = get_tortoisegit_version()
+    version = get_version()
     print(version)

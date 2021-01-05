@@ -5,7 +5,7 @@ import requests
 import urllib
 from bs4 import BeautifulSoup
 
-def get_becky_version():
+def get_version():
     url = 'https://www.rimarts.co.jp/becky-j.htm'
     ua = 'softverupcheck'
 
@@ -21,5 +21,5 @@ def get_becky_version():
 
 
 if __name__ == '__main__':
-    version = get_explzh_version()
+    version = get_version()
     print(version)
